@@ -9,6 +9,7 @@ import axios from 'axios';
 function App() {
 
   const[song, setSong] = useState([]);
+  // const[search]
 
   async function getSongs(){
     let response = await axios.get("http://127.0.0.1:8000/api/songs/")
@@ -29,6 +30,7 @@ useEffect(()=>{
   return (
     <div className='App'>
       {/* <Navbar/> */}
+      {/* <SearchBar /> */}
       <h1>Music Library</h1>
       <div className='container'>
         <SongTable allSongs={song}/>

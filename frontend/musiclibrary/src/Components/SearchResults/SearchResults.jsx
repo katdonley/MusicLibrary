@@ -6,10 +6,13 @@ const SearchPage = (props) =>{
 
    const handleClick = (event, id, title, artist, album, releaseDate, genre) => {
    event.preventDefault();
-   props.setCurrentVideoId(id);
-   props.setCurrentVideoTitle(title);
-   props.setCurrentVideoDescription(description);
-   console.log(id, title, description)
+   props.setCurrentSongId(id);
+   props.setCurrentSongTitle(title);
+   props.setCurrentSongArtist(artist);
+   props.setCurrentSongAlbum(album);
+   props.setCurrentSongReleaseDate(releaseDate);
+   props.setCurrentSongGenre(genre);
+   console.log(id, title, artist, album, releaseDate, genre)
    }
 
     return (
@@ -21,14 +24,17 @@ const SearchPage = (props) =>{
         <div>   
             <table> 
                 <tbody>
-                {props.searchResults.map((video, index) => {
+                {props.searchResults.map((song, index) => {
                     return(
                         
                         <tr key={index}>
-                            <td>{video.snippet.title}</td>
-                            <td>{video.snippet.description}</td>
-                            <input type="image" src={video.snippet.thumbnails.medium.url} 
-                            onClick={(event) => handleClick(event, video.id.videoId, video.snippet.title, video.snippet.description)}
+                            <td>{song.title}</td>
+                            <td>{song.artist}</td>
+                            <td>{song.album}</td>
+                            <td>{song.release_date}</td>
+                            <td>{song.genre}</td>
+                            <input type="image" src={song} 
+                            onClick={(event) => handleClick(event, song.id, song.title, song.artist, song.album, song.release_date, song.genre)}
                             />
                         </tr>
                     )
