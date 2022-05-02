@@ -9,7 +9,23 @@
 			"name": "Get_All_Songs",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/songs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"songs",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,8 +34,30 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"title\": \"Real Love Baby\",\n        \"artist\": \"Father John Misty\",\n        \"album\": \"Pure Comedy\",\n        \"release_date\": \"2017-12-12\",\n        \"genre\": \"Alt Indie\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://127.0.0.1:8000/api/songs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"songs",
+						""
+					]
 				}
 			},
 			"response": []
@@ -29,8 +67,31 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"title\": \"Real Love Baby\",\n        \"artist\": \"Father John Misty\",\n        \"album\": \"Pure Comedy\",\n        \"release_date\": \"2017-12-12\",\n        \"genre\": \"Alt Indie\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://127.0.0.1:8000/api/songs/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"songs",
+						"7",
+						""
+					]
 				}
 			},
 			"response": []
@@ -39,7 +100,24 @@
 			"name": "Get_Song_By_Id",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/songs/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"songs",
+						"7",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -47,7 +125,24 @@
 			"name": "Delete_Song",
 			"request": {
 				"method": "DELETE",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/songs/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"songs",
+						"7",
+						""
+					]
+				}
 			},
 			"response": []
 		}
